@@ -51,6 +51,7 @@ body {
   top: 40%; /* relative to the parent element */
   left: 50%; /* relative to the parent element */
   transform: translate(-50%, -50%); /* relative to the element itself */
+  text-align: center; /* sets inline-block elements to center ala text */
 }
 
 .heading-primary {
@@ -58,6 +59,7 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden; /* workaround to fix the flickering and shaking issue */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -113,4 +115,29 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
